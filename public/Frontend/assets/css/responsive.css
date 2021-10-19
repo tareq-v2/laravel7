@@ -1,0 +1,228 @@
+
+/* X-SMALL DEVICE */
+
+@media (min-width: 0) and (max-width: 479px){
+   .header-top{
+      position: relative;
+   }
+   .mylogo{
+      position: absolute;
+      left: 30%;
+      top: 10%;
+      width: 35%;
+   }
+   .header-top .row div:nth-child(2) img{
+      margin-left: 0;
+   }
+   .responsive-header{
+      width: 100vw !important;
+   }
+   .footer{
+      text-align: center !important;
+      position: relative;
+   }
+   .footer .footer-box-layer{
+      position: absolute;
+      left: 15%;
+   }
+   .footer .fas{
+      position: absolute;
+      left: 0;
+   }
+   .footer h6{
+      font-size: 8px !important;
+   }
+   .developer a{
+      font-size: 6px !important;
+   }
+   .footer .fb-1{
+      margin-left: 10%;
+   }
+   .footer-about-us{
+      margin-top: 48%;
+   }
+   .footer-list{
+      padding-left: 0;
+   }
+   .footer .social-icons{
+      justify-content: center;
+      padding-left: 10px;
+   }
+   .footer .social-icons i::before{
+      padding-left: 0;
+   }
+   .developer{
+      font-size: 5px !important;
+   }
+   .p-detaits.mt-2 {
+      text-align: center;
+  }
+ }
+
+
+/* SMALL DEVICE */
+
+@media (min-width: 480px) and (max-width: 575px) { 
+   .mylogo{
+      margin-left: 160px;
+   }
+   .responsive-header{
+      width: 100vw !important;
+   }
+   .footer{
+      text-align: center !important;
+      position: relative;
+   }
+   .footer .footer-box-layer{
+      position: absolute;
+      left: 25%;
+   }
+   .footer .fas{
+      position: absolute;
+      left: 0;
+   }
+   .footer .fb-1{
+      margin-left: 10%;
+   }
+   .footer-about-us{
+      margin-top: 38%;
+   }
+   .footer-list{
+      padding-left: 0;
+   }
+   .footer .social-icons{
+      justify-content: center;
+      padding-left: 25px;
+   }
+   .footer .social-icons i::before{
+      padding-left: 0;
+   }
+   .p-detaits.mt-2 {
+      text-align: center;
+  }
+ }
+
+
+/* MEDIUM DEVICE */
+
+@media (min-width: 576px) and (max-width: 767px) { 
+   .mylogo{
+      margin-left: 247px;
+   }
+   .responsive-header{
+      width: 100vw !important;
+   }
+   .footer{
+      text-align: center !important;
+   }
+   .footer .footer-box-layer{
+      position: absolute;
+      left: 28%;
+   }
+   .footer .fas{
+      position: absolute;
+      left: 0;
+   }
+   .footer .fb-1{
+      margin-left: 10%;
+   }
+   .footer-about-us{
+      margin-top: 38%;
+   }
+   .footer-list{
+      padding-left: 0;
+   }
+   .footer .social-icons{
+      justify-content: center;
+      padding-left: 25px;
+   }
+   .footer .social-icons i::before{
+      padding-left: 0;
+   }
+   .p-detaits.mt-2 {
+      text-align: center;
+  }
+ }
+
+
+ /* X-MEDIUM DEVICE */
+
+@media (min-width: 768px) and (max-width: 991px) { 
+   .mylogo{
+      margin-left: 350px;
+   }
+   .responsive-header{
+      width: 100vw !important;
+   }
+   .footer{
+      text-align: center !important;
+   }
+   .footer .footer-box-layer{
+      position: absolute;
+      left: 37%;
+   }
+   .footer .fas{
+      position: absolute;
+      left: 0;
+   }
+   .footer .fb-1{
+      margin-left: 10%;
+   }
+   .footer-about-us{
+      margin-top: 28%;
+   }
+   .footer-list{
+      padding-left: 0;
+   }
+   .footer .social-icons{
+      justify-content: center;
+      padding-left: 25px;
+   }
+   .footer .social-icons i::before{
+      padding-left: 0;
+   }
+   .p-detaits.mt-2 {
+      text-align: center;
+  }
+ }
+
+/* LARGE DEVICE */
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+   .mylogo{
+      margin-left: 0;
+   }
+   .bolt-icon{
+      margin-bottom: 28px !important; 
+   }
+   #pc-builder{
+      display: none !important;
+   }
+   .footer .footer-box-layer{
+      position: absolute;
+      left: 39%;
+   }
+ }
+
+
+/* X-LARGE DEVICE */
+
+@media (min-width: 1200px) and (max-width: 1399px) { 
+   .mylogo{
+      position: absolute;
+      right: 15%;
+      top: 5%;
+      width: 144px;
+      height: 80px;
+   }
+   
+ }
+
+
+/* XX-LARGE DEVICE */
+
+@media (min-width: 1400px) { 
+   .bolt-icon{
+      margin-bottom: 28px !important; 
+   }
+ }

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\.."
+		},
+		{
+			"path": "D:\\xampp\\htdocs\\training"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project-laravel"
+	}
+}
