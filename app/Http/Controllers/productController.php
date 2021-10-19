@@ -29,9 +29,9 @@ class productController extends Controller
        
         // dd($request->all());
         $validator = $request->validate([
-            'item_id'=> 'required', 
-            'category_id'=> 'required',
             'product_name'=> 'required',
+            // 'item_id'=> 'required', 
+            // 'category_id'=> 'required',
             'sale_price'=> 'required',
         ]);
 
@@ -54,7 +54,7 @@ class productController extends Controller
 
             $file->move(public_path('Backend/productImage'),$image_name);
 
-            product_product_info::where('id',$insert->id)->update(['image'=>$image_name]);
+            products::where('id',$insert->id)->update(['image'=>$image_name]);
         }
 
         return redirect()->back()->with('success','Data Insert Succesfully!');
@@ -62,14 +62,16 @@ class productController extends Controller
     }
 
     public function productView(){
-        $data = products::join('product_items','product_items.id','products.item_id')
-        ->join('category','category.id','products.category_id')
-        ->select('products.*','category.category_name','product_items.item_name')->get();
+        // $data = products::join('product_items','product_items.id','products.item_id')
+        // ->join('category','category.id','products.category_id')
+        // ->select('products.*','category.category_name','product_items.item_name')->get();
 
         // $item = product_item::all();
         // $cat = category::all();
 
-        return view('Backend.components.viewProduct',compact('data'));
+        $product = products::all();
+
+        return view('Backend.components.viewProduct',compact('product'));
     }
     public function edit($id){
         $data = products::find($id);
@@ -101,7 +103,7 @@ class productController extends Controller
 
             $file->move(public_path('Backend/productImage'),$image_name);
            
-            product_info::find($id)->update(['image'=>$image_name]);
+            product::find($id)->update(['image'=>$image_name]);
         }
 
         return redirect()->back()->with('info','Data Update Succesfully!');

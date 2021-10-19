@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\product_item;
+use App\products;
+use App\category;
+use validate;
+use Auth;
+use DB;
 
 class frontController extends Controller
 {
     public function showProduct(){
-        return view('Frontend.Layouts.User.product');
+        $product = products::all();
+        return view('Frontend.Layouts.User.product', compact('product'));
     }
     public function showOffer(){
         return view('Frontend.Layouts.User.offerFront');
