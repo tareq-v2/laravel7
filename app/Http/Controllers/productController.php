@@ -20,18 +20,18 @@ class productController extends Controller
 
     $cat = category::all();
 
-        //  dd($data);
+    
         return view('Backend.components.addProduct',compact('data', 'cat'));
     }
 
     public function store(Request $request)
     {
-       
+      
         // dd($request->all());
         $validator = $request->validate([
             'product_name'=> 'required',
-            // 'item_id'=> 'required', 
-            // 'category_id'=> 'required',
+            'item_name'=> 'required', 
+            'category_name'=> 'required',
             'sale_price'=> 'required',
         ]);
 
@@ -39,8 +39,8 @@ class productController extends Controller
 
         $insert = products::create([
             'product_name'=>$request->product_name,
-            'item_id'=>$request->item_id,
-            'category_id'=>$request->category_id,
+            'item_id'=>$request->item_name,
+            'category_id'=>$request->category_name,
             'sale_price'=>$request->sale_price,
             'old_price'=>$request->old_price,
             'description'=>$request->description,
@@ -62,16 +62,18 @@ class productController extends Controller
     }
 
     public function productView(){
-        // $data = products::join('product_items','product_items.id','products.item_id')
-        // ->join('category','category.id','products.category_id')
-        // ->select('products.*','category.category_name','product_items.item_name')->get();
+        
 
         // $item = product_item::all();
         // $cat = category::all();
+         $data = products::join('product_items','product_items.id','products.item_id')
+        ->join('category','category.id','products.category_id')
+        ->select('products.*','category.category_name','product_items.item_name')->get();
+
 
         $product = products::all();
 
-        return view('Backend.components.viewProduct',compact('product'));
+        return view('Backend.components.viewProduct',compact('data'));
     }
     public function edit($id){
         $data = products::find($id);

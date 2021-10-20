@@ -7,8 +7,6 @@ use App\Http\Controllers\bodyController;
 use App\Http\Controllers\productController;
 
 
-
-
 Route::get('/', function (){
     return view('Frontend.Layouts.home');
 });
